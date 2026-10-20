@@ -1,3 +1,4 @@
+import 'package:eduquest/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'theme/app_theme.dart';
@@ -15,7 +16,7 @@ class EduQuestApp extends StatelessWidget {
       title: 'EduQuest',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      home: const ThemePreviewScreen(),
+      home: const HomeScreen(),
     );
   }
 }
