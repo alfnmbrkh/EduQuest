@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../providers/quiz_provider.dart';
+import 'quiz_screen.dart';
 import '../theme/app_theme.dart';
 import '../widgets/category_card.dart';
 
@@ -129,11 +132,12 @@ class HomeScreen extends StatelessWidget {
                         icon: category['icon'] as IconData,
                         color: category['color'] as Color,
                         onTap: () {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text(
-                                'Kategori ${category['title']} dipilih',
-                              ),
+                          context.read<QuizProvider>().restartQuiz();
+
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const QuizScreen(),
                             ),
                           );
                         },

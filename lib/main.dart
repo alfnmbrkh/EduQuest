@@ -1,10 +1,18 @@
 import 'package:eduquest/screens/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'providers/quiz_provider.dart';
 
 import 'theme/app_theme.dart';
 
 void main() {
-  runApp(const EduQuestApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => QuizProvider(),
+      child: const EduQuestApp(),
+    ),
+  );
 }
 
 class EduQuestApp extends StatelessWidget {
