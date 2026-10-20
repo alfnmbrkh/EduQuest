@@ -37,16 +37,16 @@ Jika tidak menggunakan aset gambar eksternal, tuliskan bahwa gambar eksternal ti
 ### 2. Screenshot Setiap Halaman Aplikasi
 
 #### Halaman Home
-![Halaman Home](screenshots/home.jpg)
+![Halaman Home](screenshot/home.jpg)
 
 #### Halaman Kuis
-![Halaman Kuis](screenshots/quiz.jpg)
+![Halaman Kuis](screenshot/quiz.jpg)
 
 #### Halaman Hasil Kuis
-![Halaman Hasil Kuis](screenshots/hasil.jpg)
+![Halaman Hasil Kuis](screenshot/hasil.jpg)
 
 #### Halaman dengan Tema Gelap
-![Tema Gelap](screenshots/dark_theme.jpg)
+![Tema Gelap](screenshot/dark_theme.jpg)
 
 ### 3. Link Mockup/Prototype Aplikasi
 
