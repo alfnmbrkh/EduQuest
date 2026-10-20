@@ -50,7 +50,7 @@ Jika tidak menggunakan aset gambar eksternal, tuliskan bahwa gambar eksternal ti
 
 ### 3. Link Mockup/Prototype Aplikasi
 
-**Link Figma atau Prototype:** -.
+**Link Figma atau Prototype:** - https://www.figma.com/design/n9IBKDwhOwCprQvk0aFmGU/EduQuest-%E2%80%94-Mobile-Quiz-App?node-id=0-1&t=H9X1cvFDTgVCuwOc-1.
 
 ### 4. Link Video Presentasi
 
