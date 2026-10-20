@@ -12,6 +12,7 @@ class AppTheme {
 
   static ThemeData get lightTheme {
     return ThemeData(
+      fontFamily: 'Nunito',
       useMaterial3: true,
       brightness: Brightness.light,
       scaffoldBackgroundColor: background,
