@@ -52,8 +52,10 @@ class QuizScreen extends StatelessWidget {
                               Text(
                                 'Soal ${quiz.currentQuestionIndex + 1}'
                                 ' dari ${quiz.totalQuestions}',
-                                style: const TextStyle(
-                                  color: AppTheme.textSecondary,
+                                style: TextStyle(
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onSurfaceVariant,
                                 ),
                               ),
                             ],
@@ -89,7 +91,9 @@ class QuizScreen extends StatelessWidget {
                                 index == question.correctAnswerIndex;
 
                             Color borderColor = Colors.grey.shade300;
-                            Color backgroundColor = Colors.white;
+                            Color backgroundColor = Theme.of(context)
+                                .colorScheme
+                                .surface;
                             IconData? trailingIcon;
 
                             if (selectedAnswer != null && isCorrect) {

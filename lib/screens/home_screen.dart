@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/quiz_provider.dart';
-import 'quiz_screen.dart';
+import '../providers/theme_provider.dart';
 import '../theme/app_theme.dart';
 import '../widgets/category_card.dart';
+import 'quiz_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -40,14 +41,39 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Row(
+        title: Row(
           children: [
-            Icon(Icons.school_rounded, color: AppTheme.primary),
-            SizedBox(width: 8),
-            Text('EduQuest', style: TextStyle(fontWeight: FontWeight.bold)),
+            Icon(
+              Icons.school_rounded,
+              color: Theme.of(context).colorScheme.onSurface,
+            ),
+            const SizedBox(width: 8),
+            const Text(
+              'EduQuest',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
           ],
         ),
+        actions: [
+          Consumer<ThemeProvider>(
+            builder: (context, themeProvider, child) {
+              return IconButton(
+                tooltip: themeProvider.isDarkMode
+                    ? 'Aktifkan Light Mode'
+                    : 'Aktifkan Dark Mode',
+                icon: Icon(
+                  themeProvider.isDarkMode
+                      ? Icons.light_mode_rounded
+                      : Icons.dark_mode_rounded,
+                ),
+                onPressed: themeProvider.toggleTheme,
+              );
+            },
+          ),
+          const SizedBox(width: 8),
+        ],
       ),
+
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) {
@@ -62,14 +88,15 @@ class HomeScreen extends StatelessWidget {
                     'Ready for a challenge?',
                     style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                       fontWeight: FontWeight.bold,
-                      color: AppTheme.textPrimary,
+                      color: Theme.of(context).colorScheme.onSurface,
                     ),
                   ),
                   const SizedBox(height: 8),
                   Text(
                     'Belajar jadi lebih seru melalui kuis interaktif.',
-                    style: Theme.of(context).textTheme.bodyMedium
-                        ?.copyWith(color: AppTheme.textSecondary),
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: Theme.of(context).colorScheme.onSurfaceVariant,
+                    ),
                   ),
                   const SizedBox(height: 24),
                   Container(
