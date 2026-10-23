@@ -54,4 +54,4 @@ Jika tidak menggunakan aset gambar eksternal, tuliskan bahwa gambar eksternal ti
 
 ### 4. Link Video Presentasi
 
-**Video Presentasi:** -.
+**Video Presentasi:** https://drive.google.com/file/d/1AGl-G07Cwe_oF4O39of241GyVGLLbUWr/view?usp=sharing.
